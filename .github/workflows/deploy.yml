@@ -1,0 +1,36 @@
+name: Deploy a Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: pages-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Desplegar sitio
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout del repo
+        uses: actions/checkout@v4
+
+      - name: Desplegar a Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy . --project-name=webytex --branch=main --commit-dirty=true
+
+      - name: Mostrar URL del deploy
+        run: |
+          echo "Deploy completado"
+          echo "Production: https://webytex.pages.dev"
+          echo "Custom domain: https://webytex.com (si DNS configurado)"
