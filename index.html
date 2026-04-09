@@ -157,29 +157,16 @@
       gap: 0.75rem;
     }
     .brand-mark {
-      display: grid;
-      place-items: center;
+      display: block;
       width: 36px;
       height: 36px;
-      background: var(--text);
-      color: var(--bg);
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1;
-      letter-spacing: -0.03em;
       position: relative;
-      font-variation-settings: "opsz" 144, "SOFT" 50;
+      flex-shrink: 0;
     }
-    .brand-mark::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      right: -3px;
-      width: 7px;
-      height: 7px;
-      background: var(--accent);
+    .brand-mark svg {
+      width: 100%;
+      height: 100%;
+      display: block;
     }
     .brand-stack {
       display: flex;
@@ -1659,7 +1646,7 @@
   <header class="topbar">
     <div class="topbar__inner">
       <a href="#" class="topbar__brand" aria-label="Webytex home">
-        <span class="brand-mark">W</span>
+        <span class="brand-mark"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4AF37"/><stop offset="50%" stop-color="#F6F2E6"/><stop offset="100%" stop-color="#B8942F"/></linearGradient><linearGradient id="bGoldL" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#9B7F3C"/></linearGradient><filter id="bGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="200" height="200" rx="16" fill="#0A1628"/><g stroke="url(#bGoldL)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#bGlow)"><polyline points="38,60 65,152 100,72 135,152 162,60"/></g><g filter="url(#bGlow)"><circle cx="38" cy="60" r="5.5" fill="url(#bGold)"/><circle cx="65" cy="152" r="5.5" fill="url(#bGold)"/><circle cx="100" cy="72" r="5.5" fill="url(#bGold)"/><circle cx="135" cy="152" r="5.5" fill="url(#bGold)"/><circle cx="162" cy="60" r="5.5" fill="url(#bGold)"/></g></svg></span>
         <span class="brand-stack">
           <span class="brand-text">Webytex</span>
           <span class="brand-sub">LLC · EST. MMXX</span>
@@ -2430,7 +2417,7 @@
     <div class="footer__inner">
       <div class="footer__col">
         <div class="footer__brand-block">
-          <span class="brand-mark">W</span>
+          <span class="brand-mark"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4AF37"/><stop offset="50%" stop-color="#F6F2E6"/><stop offset="100%" stop-color="#B8942F"/></linearGradient><linearGradient id="bGoldL" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#9B7F3C"/></linearGradient><filter id="bGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect width="200" height="200" rx="16" fill="#0A1628"/><g stroke="url(#bGoldL)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#bGlow)"><polyline points="38,60 65,152 100,72 135,152 162,60"/></g><g filter="url(#bGlow)"><circle cx="38" cy="60" r="5.5" fill="url(#bGold)"/><circle cx="65" cy="152" r="5.5" fill="url(#bGold)"/><circle cx="100" cy="72" r="5.5" fill="url(#bGold)"/><circle cx="135" cy="152" r="5.5" fill="url(#bGold)"/><circle cx="162" cy="60" r="5.5" fill="url(#bGold)"/></g></svg></span>
           <span class="brand-stack">
             <span class="brand-text">Webytex</span>
             <span class="brand-sub">LLC · EST. MMXX</span>
